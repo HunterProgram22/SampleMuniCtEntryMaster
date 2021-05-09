@@ -10,6 +10,7 @@ from PyQt5.QtCore import pyqtSlot
 
 from main_window_ui import Ui_MainWindow
 from final_judgment_entry_ui import Ui_Dialog
+from bond_sheet_ui import Ui_BondSheetDialog
 
 class Window(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
@@ -19,10 +20,16 @@ class Window(QMainWindow, Ui_MainWindow):
 
     def connectSignalsSlots(self):
         self.actionFinal_Judgment_Entry.triggered.connect(self.FinalJudgmentEntry)
+        self.actionBond_Sheet.triggered.connect(self.BondSheet)
 
     def FinalJudgmentEntry(self):
         dialog = FinalJudgmentEntryDialog(self)
-        dialog.exec() #test
+        dialog.exec()
+
+    def BondSheet(self):
+        dialog = BondSheetDialog(self)
+        dialog.exec()
+
 
 
 class FinalJudgmentEntryDialog(QDialog, Ui_Dialog):
@@ -30,6 +37,7 @@ class FinalJudgmentEntryDialog(QDialog, Ui_Dialog):
         super().__init__(parent)
         self.setupUi(self)
         #loadUi("ui/final_judgment_entry.ui", self)
+
     def open_doc(self):
         """For templates need to make sure all styles used are part of the template. One solution is the template has all types of
         text and then is deleted when opened."""
@@ -54,6 +62,16 @@ class FinalJudgmentEntryDialog(QDialog, Ui_Dialog):
             #p_comm_control = document.add_paragraph("There are no community control " +\
             #"sanctions for {0}".format(self.lineEdit.text()))
         document.save('demo.docx')
+
+
+class BondSheetDialog(QDialog, Ui_BondSheetDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setupUi(self)
+        #loadUi("ui/final_judgment_entry.ui", self)
+
+    def open_doc(self):
+        pass
 
 
 if __name__ == "__main__":
