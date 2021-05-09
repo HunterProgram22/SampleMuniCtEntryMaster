@@ -22,7 +22,7 @@ class Window(QMainWindow, Ui_MainWindow):
 
     def FinalJudgmentEntry(self):
         dialog = FinalJudgmentEntryDialog(self)
-        dialog.exec()
+        dialog.exec() #test
 
 
 class FinalJudgmentEntryDialog(QDialog, Ui_Dialog):
