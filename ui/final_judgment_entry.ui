@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>546</width>
+    <height>364</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Final Judgment Entry</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>321</width>
+     <height>144</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Defendant Name:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Case No.:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_2"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Charge:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="comboBox">
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>OVI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Domestic Violence</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Driving Under Suspension</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Plea:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="comboBox_2">
+      <item>
+       <property name="text">
+        <string>Guilty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>No Contest</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Finding:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QComboBox" name="comboBox_3">
+      <item>
+       <property name="text">
+        <string>Guilty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Not Guilty</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dismissed</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>40</y>
+     <width>95</width>
+     <height>162</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Create Entry</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Clear Fields</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>58</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>196</width>
+     <height>122</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_6">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Community Control Terms</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>Drug Testing Required</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="text">
+       <string>Driver's License Revoked</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="text">
+       <string>Weekend Reporting Required</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="checkBox_4">
+      <property name="text">
+       <string>GPS Monitoring</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>checkBox_2</tabstop>
+  <tabstop>checkBox_3</tabstop>
+  <tabstop>checkBox_4</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_3</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>449</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>460</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>58</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>427</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>342</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>comboBox</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>340</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>comboBox_2</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>431</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>350</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>comboBox_3</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>484</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>open_doc()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>480</x>
+     <y>13</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_doc()</slot>
+ </slots>
+</ui>

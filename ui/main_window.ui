@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Entry Master</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Entry"/>
+   </widget>
+   <widget class="QMenu" name="menuCriminal">
+    <property name="title">
+     <string>Criminal</string>
+    </property>
+    <addaction name="actionFinal_Judgment_Entry"/>
+    <addaction name="actionBond_Sheet"/>
+    <addaction name="actionFailure_to_Appear"/>
+   </widget>
+   <widget class="QMenu" name="menuCivil">
+    <property name="title">
+     <string>Civil</string>
+    </property>
+    <addaction name="actionLien_Entry"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuCriminal"/>
+   <addaction name="menuCivil"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFinal_Judgment_Entry">
+   <property name="text">
+    <string>Final Judgment Entry</string>
+   </property>
+  </action>
+  <action name="actionBond_Sheet">
+   <property name="text">
+    <string>Bond Sheet</string>
+   </property>
+  </action>
+  <action name="actionFailure_to_Appear">
+   <property name="text">
+    <string>Failure to Appear</string>
+   </property>
+  </action>
+  <action name="actionNew_Entry">
+   <property name="text">
+    <string>New Entry</string>
+   </property>
+  </action>
+  <action name="actionLien_Entry">
+   <property name="text">
+    <string>Lien Entry</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
