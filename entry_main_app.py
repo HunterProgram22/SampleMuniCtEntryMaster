@@ -71,8 +71,16 @@ class BondSheetDialog(QDialog, Ui_BondSheetDialog):
         #loadUi("ui/final_judgment_entry.ui", self)
 
     def open_doc(self):
-        pass
-
+        document = Document("entry_template.docx")
+        heading = document.add_heading('Bond Entry', 0)
+        heading.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_name = document.add_paragraph("The defendant is: {0}".format(self.DefendantName_lineEdit.text()))
+        p_case_number = document.add_paragraph("The case number is: {0}".format(self.CaseNo_lineEdit.text()))
+        p_charge = document.add_paragraph("The charge is: {0}".format(self.Charge_comboBox.currentText()))
+        p_bond_set = document.add_paragraph("The bond for {0} is set as a {1} at {2}.".format(self.DefendantName_lineEdit.text(),
+            self.BondType_comboBox.currentText(), self.BondAmount_doubleSpinBox.value()))
+        print(str(self.BondAmount_doubleSpinBox.value()))
+        document.save('demo_bond.docx')
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

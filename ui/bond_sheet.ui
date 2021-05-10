@@ -123,17 +123,129 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QComboBox" name="Charge_comboBox"/>
+     <widget class="QComboBox" name="Charge_comboBox">
+      <item>
+       <property name="text">
+        <string>OVI</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Driving Under Suspension</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Menacing</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Domestic Violence</string>
+       </property>
+      </item>
+     </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QComboBox" name="BondType_comboBox"/>
+     <widget class="QComboBox" name="BondType_comboBox">
+      <item>
+       <property name="text">
+        <string>Personal Recognizance Bond</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10% Bond</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cash or Surety Bond</string>
+       </property>
+      </item>
+     </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QDoubleSpinBox" name="BondAmount_doubleSpinBox"/>
+     <widget class="QDoubleSpinBox" name="BondAmount_doubleSpinBox">
+      <property name="maximum">
+       <double>10000000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>10.000000000000000</double>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>CreateEntry_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BondSheetDialog</receiver>
+   <slot>open_doc()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>481</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>512</x>
+     <y>-6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ClearFields_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DefendantName_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>472</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>30</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ClearFields_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CaseNo_lineEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>479</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>371</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cancel_pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>BondSheetDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>525</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_doc()</slot>
+ </slots>
 </ui>
